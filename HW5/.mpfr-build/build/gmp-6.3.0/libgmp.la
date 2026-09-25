@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-env/lib'
+libdir='/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-env/lib'

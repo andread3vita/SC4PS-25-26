@@ -28,7 +28,7 @@
 # even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 # PARTICULAR PURPOSE.
 
-VPATH = /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/tools/bench
+VPATH = /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/tools/bench
 am__is_gnu_make = { \
   if test -z '$(MAKELEVEL)'; then \
     false; \
@@ -189,21 +189,21 @@ am__define_uniq_tagged_files = \
   done | $(am__uniquify_input)`
 am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/depcomp README
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} '/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/missing' aclocal-1.17
+ACLOCAL = ${SHELL} '/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/missing' aclocal-1.17
 ALLOCA = 
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
 AS = as
-AUTOCONF = ${SHELL} '/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/missing' autoconf
-AUTOHEADER = ${SHELL} '/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/missing' autoheader
-AUTOMAKE = ${SHELL} '/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/missing' automake-1.17
+AUTOCONF = ${SHELL} '/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/missing' autoconf
+AUTOHEADER = ${SHELL} '/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/missing' autoheader
+AUTOMAKE = ${SHELL} '/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/missing' automake-1.17
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = -Wall -Wmissing-prototypes -Wc++-compat -Wpointer-arith -O2 -fomit-frame-pointer -m64 -mtune=znver2 -march=znver2
+CFLAGS = -Wall -Wmissing-prototypes -Wc++-compat -Wpointer-arith -O2 -fomit-frame-pointer -m64 -mtune=znver3 -march=znver3
 CPP = gcc -E
-CPPFLAGS =  -I/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-env/include
+CPPFLAGS =  -I/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-env/include
 CSCOPE = cscope
 CTAGS = ctags
 CYGPATH_W = echo
@@ -228,7 +228,7 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld -m elf_x86_64
-LDFLAGS =  -L/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-env/lib -Wl,--disable-new-dtags
+LDFLAGS =  -L/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-env/lib -Wl,--disable-new-dtags
 LIBMPFR_LDFLAGS = 
 LIBOBJS = 
 LIBS = -lgmp 
@@ -238,7 +238,7 @@ LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 MAINT = 
-MAKEINFO = ${SHELL} '/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/missing' makeinfo
+MAKEINFO = ${SHELL} '/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/missing' makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /usr/bin/mkdir -p
 MPFR_LDFLAGS = 
@@ -269,10 +269,10 @@ SHELL = /bin/sh
 STRIP = strip
 TUNE_LIBS = 
 VERSION = 4.2.2
-abs_builddir = /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/build/mpfr-4.2.2/tools/bench
-abs_srcdir = /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/tools/bench
-abs_top_builddir = /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/build/mpfr-4.2.2
-abs_top_srcdir = /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2
+abs_builddir = /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/build/mpfr-4.2.2/tools/bench
+abs_srcdir = /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/tools/bench
+abs_top_builddir = /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/build/mpfr-4.2.2
+abs_top_srcdir = /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
@@ -304,7 +304,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/install-sh
+install_sh = ${SHELL} /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -314,18 +314,18 @@ mini_gmp_path =
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-env
+prefix = /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-env
 program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
-srcdir = /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/tools/bench
+srcdir = /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/tools/bench
 sysconfdir = ${prefix}/etc
 target_alias = 
 top_build_prefix = ../../
 top_builddir = ../..
-top_srcdir = /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2
+top_srcdir = /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2
 AM_CPPFLAGS = -I$(top_srcdir)/src -I$(top_builddir)/src
 AM_DEFAULT_SOURCE_EXT = .c
 LDADD = $(top_builddir)/src/libmpfr.la

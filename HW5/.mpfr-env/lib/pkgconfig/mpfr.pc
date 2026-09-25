@@ -1,4 +1,4 @@
-prefix=/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-env
+prefix=/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-env
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

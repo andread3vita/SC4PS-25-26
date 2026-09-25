@@ -119,7 +119,7 @@ def plot_frequency_resolution_comparison() -> None:
     sample_rate_hz = 512.0
     cases = [
         (64, "Original: N = 64, T = 0.125 s, df = 8 Hz"),
-        (512, "Part 7: N = 512, T = 1 s, df = 1 Hz"),
+        (1024, "Part 7: N = 1024, T = 2 s, df = 0.5 Hz"),
     ]
 
     fig, axes = plt.subplots(1, 2, figsize=(14, 5), sharey=True, constrained_layout=True)

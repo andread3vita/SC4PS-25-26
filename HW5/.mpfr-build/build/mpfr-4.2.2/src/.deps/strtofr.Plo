@@ -1,5 +1,5 @@
 strtofr.lo: \
- /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/strtofr.c \
+ /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/strtofr.c \
  /usr/include/stdc-predef.h /usr/include/ctype.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
  /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
@@ -8,7 +8,7 @@ strtofr.lo: \
  /usr/include/bits/typesizes.h /usr/include/bits/time64.h \
  /usr/include/bits/endian.h /usr/include/bits/endianness.h \
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
- /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-impl.h \
+ /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-impl.h \
  /usr/include/stdio.h /usr/include/bits/libc-header-start.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stddef.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdarg.h \
@@ -40,16 +40,16 @@ strtofr.lo: \
  /usr/include/bits/pthread_stack_min-dynamic.h \
  /usr/include/bits/pthread_stack_min.h /usr/include/bits/posix2_lim.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/float.h \
- /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-cvers.h \
- /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-thread.h \
- /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-env/include/gmp.h \
- /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr.h \
- /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-gmp.h \
- /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-longlong.h \
- /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-sassert.h \
+ /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-cvers.h \
+ /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-thread.h \
+ /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-env/include/gmp.h \
+ /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr.h \
+ /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-gmp.h \
+ /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-longlong.h \
+ /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-sassert.h \
  mparam.h \
- /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/x86_64/mparam.h \
- /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/generic/mparam.h \
+ /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/x86_64/mparam.h \
+ /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/generic/mparam.h \
  /usr/include/locale.h /usr/include/bits/locale.h
 /usr/include/stdc-predef.h:
 /usr/include/ctype.h:
@@ -68,7 +68,7 @@ strtofr.lo: \
 /usr/include/bits/endianness.h:
 /usr/include/bits/types/locale_t.h:
 /usr/include/bits/types/__locale_t.h:
-/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-impl.h:
+/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-impl.h:
 /usr/include/stdio.h:
 /usr/include/bits/libc-header-start.h:
 /usr/lib/gcc/x86_64-redhat-linux/11/include/stddef.h:
@@ -122,15 +122,15 @@ strtofr.lo: \
 /usr/include/bits/pthread_stack_min.h:
 /usr/include/bits/posix2_lim.h:
 /usr/lib/gcc/x86_64-redhat-linux/11/include/float.h:
-/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-cvers.h:
-/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-thread.h:
-/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-env/include/gmp.h:
-/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr.h:
-/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-gmp.h:
-/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-longlong.h:
-/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-sassert.h:
+/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-cvers.h:
+/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-thread.h:
+/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-env/include/gmp.h:
+/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr.h:
+/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-gmp.h:
+/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-longlong.h:
+/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/mpfr-sassert.h:
 mparam.h:
-/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/x86_64/mparam.h:
-/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/mpfr-4.2.2/src/generic/mparam.h:
+/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/x86_64/mparam.h:
+/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/mpfr-4.2.2/src/generic/mparam.h:
 /usr/include/locale.h:
 /usr/include/bits/locale.h:

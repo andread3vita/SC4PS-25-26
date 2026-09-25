@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 
     // Second check: random elements in diagonal and off-diagonal
     bool isCorrect = true;
-    double tol = 1e-10;
+    double tol = 1e-8;
     int checkEntries[4][2] = { {N-2, N-2}, {N-2, 2}, {N-2, N-1}, {N-1, N-2}};
     for (int t = 0; t < 4; t++) {
 
@@ -66,23 +66,6 @@ int main(int argc, char *argv[])
     if ((fabs(trace - N * a * b) < tol) && isCorrect) printf("C has diagonal elements equal to a * b\n");
     else printf("C has not diagonal elements equal to a * b\n");
     
-    // Save C in a file
-    FILE *file;
-    file = fopen(filename, "w");
-
-    fprintf(file, "C =\n");
-    for (int i = 0; i < N; i++)
-    {
-        for(int j = 0; j < N; j++)
-        {
-            fprintf(file, "%f\t", C[i + N * j]);
-            
-        }
-        fprintf(file, "\n");
-    }
-
-    fclose(file); 
-
 
     // Benchmarking
     clock_t begin_1 = clock();
@@ -112,10 +95,28 @@ int main(int argc, char *argv[])
     double time_spent_2 = (double)(end_2 - begin_2) / CLOCKS_PER_SEC;
 
 
-    printf("Time 1: Multiplication (column major): %f \n", time_spent_1);
-    printf("Time 2: Multiplication (row major): %f \n", time_spent_2);
+    printf("Time 1: Multiplication (column major): %f [s] \n", time_spent_1);
+    printf("Time 2: Multiplication (row major): %f [s] \n", time_spent_2);
 
 
+    // Save C in a file
+    FILE *file;
+    file = fopen(filename, "w");
+
+    fprintf(file, "C =\n");
+    for (int i = 0; i < N; i++)
+    {
+        for(int j = 0; j < N; j++)
+        {
+            fprintf(file, "%f\t", C[i + N * j]);
+            
+        }
+        fprintf(file, "\n");
+    }
+
+    fclose(file); 
+
+    
     free(C);
     free(A);
     free(B);

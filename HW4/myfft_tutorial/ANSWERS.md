@@ -38,14 +38,11 @@ Running `make run` creates these files:
    - `output/coupled_oscillators_time.csv`
    - `output/coupled_oscillators_spectrum.csv`
 
-2. `src/sampling_demo.c` studies pure sampling issues: adequate sampling,
-   aliasing, and limited frequency resolution.
+2. `src/sampling_demo.c` studies pure sampling issues: adequate sampling, aliasing, and limited frequency resolution.
 
-3. `src/coupled_oscillators_fft.c` studies the mechanics problem of two coupled
-   masses and springs.
+3. `src/coupled_oscillators_fft.c` studies the mechanics problem of two coupled masses and springs.
 
-4. In the well-sampled case, the reported peaks are **50 Hz** with amplitude
-   1.0 and **120 Hz** with amplitude 0.7.
+4. In the well-sampled case, the reported peaks are **50 Hz** with amplitude 1.0 and **120 Hz** with amplitude 0.7.
 
 ## Part 3: Sampling and aliasing
 
@@ -61,12 +58,9 @@ Running `make run` creates these files:
    frequency. There are therefore too few samples per cycle to identify it
    uniquely, so it cannot be reconstructed faithfully from these samples.
 
-4. The generated spectrum confirms a peak at **8 Hz**, in addition to the
-   correctly represented 50 Hz peak.
+4. The generated spectrum confirms a peak at **8 Hz**, in addition to the correctly represented 50 Hz peak.
 
-5. Sampling observes a sinusoid only at times $t_n=n/f_s$. Frequencies that
-   differ by an integer multiple of $f_s$ can produce the same discrete sample
-   sequence, apart from phase or sign. In this case,
+5. Sampling observes a sinusoid only at times $t_n=n/f_s$. Frequencies that differ by an integer multiple of $f_s$ can produce the same discrete sample sequence, apart from phase or sign. In this case,
 
    $$
    f_{\mathrm{alias}}=|120-128|\,\mathrm{Hz}=8\,\mathrm{Hz}.
@@ -169,23 +163,23 @@ Running `make run` creates these files:
 
 I chose **Option B: change the observation time**.
 
-1. I tested changing the `short_record` sample count from $N=64$ to $N=512$
+1. I tested changing the `short_record` sample count from $N=64$ to $N=1024$
    while retaining $f_s=512\,\mathrm{Hz}$ and therefore
    $\Delta t=1/512\,\mathrm{s}$. This increases the record length from
    0.125 s to
 
    $$
-   T=N\Delta t=512\left(\frac{1}{512}\right)\mathrm{s}=1\,\mathrm{s}.
+   T=N\Delta t=1024\left(\frac{1}{512}\right)\mathrm{s}=2\,\mathrm{s}.
    $$
 
 2. Before rerunning, I predicted that the bin spacing would decrease from 8 Hz
    to
 
    $$
-   \Delta f=\frac{1}{T}=1\,\mathrm{Hz}.
+   \Delta f=\frac{1}{T}=0.5\,\mathrm{Hz}.
    $$
 
-   I therefore expected separate peaks at 50 Hz and 55 Hz, five FFT bins apart.
+   I therefore expected separate peaks at 50 Hz and 55 Hz, ten FFT bins apart.
 
 3. The rerun matched the prediction: it reported a 50 Hz peak with amplitude
    1.0000 and a 55 Hz peak with amplitude 0.8500. The longer record therefore
@@ -196,7 +190,7 @@ I chose **Option B: change the observation time**.
    ![Comparison of the original and extended short-record spectra](plots/part7_frequency_resolution.png)
 
    In the left panel, the 8 Hz bin spacing merges the two inputs into one
-   dominant peak near 48 Hz. In the right panel, the 1 Hz bin spacing places
+   dominant peak near 48 Hz. In the right panel, the 0.5 Hz bin spacing places
    distinct bins at 50 Hz and 55 Hz, clearly resolving both components.
 
 ## Part 8: Reflection

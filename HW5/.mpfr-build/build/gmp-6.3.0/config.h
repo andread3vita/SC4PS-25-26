@@ -37,7 +37,7 @@ see https://www.gnu.org/licenses/.
 
 /* The gmp-mparam.h file (a string) the tune program should suggest updating.
    */
-#define GMP_MPARAM_H_SUGGEST "/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-build/sources/gmp-6.3.0/mpn/x86_64/zen2/gmp-mparam.h"
+#define GMP_MPARAM_H_SUGGEST "/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-build/sources/gmp-6.3.0/mpn/x86_64/zen3/gmp-mparam.h"
 
 /* Define to 1 if you have the `alarm' function. */
 #define HAVE_ALARM 1

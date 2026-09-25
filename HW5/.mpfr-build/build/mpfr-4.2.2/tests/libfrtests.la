@@ -17,7 +17,7 @@ old_library='libfrtests.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -L../src/.libs -L/afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-env/lib /afs/cern.ch/user/a/adevita/public/Renzi/HW5/.mpfr-env/lib/libgmp.la'
+dependency_libs=' -L../src/.libs -L/afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-env/lib /afs/cern.ch/user/a/adevita/public/Renzi/SC4PS-25-26/HW5/.mpfr-env/lib/libgmp.la'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
