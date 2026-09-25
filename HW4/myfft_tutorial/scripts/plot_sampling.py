@@ -59,7 +59,7 @@ def plot_sampling_signals() -> None:
         ),
         (
             "short_record_signal.csv",
-            "Short record: nearby frequencies cannot be separated well",
+            "Extended record: 1024 samples over 2 s",
         ),
     ]
 
@@ -93,7 +93,7 @@ def plot_sampling_spectra() -> None:
         ),
         (
             "short_record_spectrum.csv",
-            "Short-record spectrum",
+            "Extended-record spectrum: 50 Hz and 55 Hz resolved",
             (0.0, 120.0),
         ),
     ]

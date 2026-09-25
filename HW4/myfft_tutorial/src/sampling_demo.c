@@ -286,10 +286,10 @@ int main(int argc, char **argv)
         },
         {
             "short_record",
-            "The signal contains 50 Hz and 55 Hz, but the record is too short, so the FFT cannot separate nearby frequencies cleanly.",
+            "With 1024 samples, the 2 s record resolves the 50 Hz and 55 Hz components cleanly.",
             close_frequencies_signal,
             512.0,
-            64U,
+            1024U,
         },
     };
     size_t i;

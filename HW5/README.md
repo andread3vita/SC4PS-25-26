@@ -27,8 +27,7 @@ high-precision reference is zero.
 Compile and run it with:
 
 ```bash
-gcc -std=c11 -O2 -Wall -Wextra -Wpedantic \
-    LegendreStability.c -lmpfr -lgmp -lm -o LegendreStability
+gcc LegendreStability.c -lmpfr -lgmp -lm -o LegendreStability
 ./LegendreStability
 ```
 
@@ -56,3 +55,8 @@ gcc spherical_harmonics.c -lmpfr -lgmp -lm -o spherical_harmonics
 
 If MPFR and GMP are not installed system-wide, run `install_mpfr.sh` and then
 source `activate_mpfr.sh` before compiling.
+
+```bash
+./install_mpfr.sh
+source ./activate_mpfr.sh
+```

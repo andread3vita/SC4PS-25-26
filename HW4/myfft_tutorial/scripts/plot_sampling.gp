@@ -31,8 +31,8 @@ plot "output/good_sampling_signal.csv" using 1:2 every 2 with lines lw 2 title "
 set title "Undersampled: 120 Hz aliases to about 8 Hz"
 plot "output/undersampled_signal.csv" using 1:2 with lines lw 2 title "signal(t)"
 
-# Short total duration: the nearby frequencies are not well separated.
-set title "Short record: nearby frequencies cannot be separated well"
+# Extended duration: 1024 samples provide a 2 s observation window.
+set title "Extended record: 1024 samples over 2 s"
 plot "output/short_record_signal.csv" using 1:2 with lines lw 2 title "signal(t)"
 
 unset multiplot
@@ -49,7 +49,7 @@ plot [0:200] "output/good_sampling_spectrum.csv" using 1:2 with impulses lw 2 ti
 set title "Undersampled spectrum"
 plot [0:80] "output/undersampled_spectrum.csv" using 1:2 with impulses lw 2 title "FFT amplitude"
 
-set title "Short-record spectrum"
+set title "Extended-record spectrum: 50 Hz and 55 Hz resolved"
 plot [0:120] "output/short_record_spectrum.csv" using 1:2 with impulses lw 2 title "FFT amplitude"
 
 unset multiplot
