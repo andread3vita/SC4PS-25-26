@@ -119,6 +119,8 @@ int main(int argc, char *argv[])
     free(C);
     free(A);
     free(B);
+    free(C_test_1);
+    free(C_test_2);
 
 
     return 0;
