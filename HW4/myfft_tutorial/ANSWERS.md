@@ -203,20 +203,3 @@ FFT code, physical applications, generated data, and reproducible plotting
 scripts are separated, while the `Makefile` ties the workflow together. I would
 extend the project with window functions and a noisy signal so that one could
 compare leakage and peak detectability for rectangular, Hann, and other windows.
-
-## Optional extension
-
-One natural follow-up would be a damped, driven oscillator described by
-
-$$
-m\ddot{x}+b\dot{x}+kx=F_0\cos(2\pi f_d t).
-$$
-
-For example, one could use $m=1\,\mathrm{kg}$, $k=25\,\mathrm{N/m}$,
-$b=0.5\,\mathrm{N\,s/m}$, $F_0=1\,\mathrm{N}$, and choose $f_d$ near the
-undamped natural frequency $\sqrt{k/m}/(2\pi)\approx0.796\,\mathrm{Hz}$. The
-transient response should produce a broadened feature near the natural
-frequency, while the steady-state response should contain a strong narrow
-component at the drive frequency. Confirming this expectation would require
-implementing and running the extension; it was not part of the worksheet run
-reported above.
