@@ -6,7 +6,7 @@
 From this directory, compile it with:
 
 ```bash
-gcc vectorSum.c -o vectorSum
+gcc vectorSum.c -o vectorSum -lm
 ```
 
 Run it by supplying `a`, the common value of the elements of `x`, the common

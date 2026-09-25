@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <math.h>
 
 int main(int argc, char *argv[])
 {
@@ -30,7 +31,7 @@ int main(int argc, char *argv[])
     bool isCorrect = true;
     for (int i = 0; i < N; i++)  
     {
-       if(d[i] != (a * x_el + y_el) )
+       if(fabs(d[i] - (a * x_el + y_el)) > 1e-8 )
        {
             isCorrect = false;
             break;

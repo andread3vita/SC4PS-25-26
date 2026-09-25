@@ -197,9 +197,6 @@ I chose **Option B: change the observation time**.
 
 This project showed me that an FFT spectrum depends as much on the measurement
 strategy as on the underlying physical signal: sampling too slowly causes
-aliasing, whereas observing for too little time limits frequency resolution. It
-also demonstrated a useful scientific-software organization in which reusable
-FFT code, physical applications, generated data, and reproducible plotting
-scripts are separated, while the `Makefile` ties the workflow together. I would
+aliasing, whereas observing for too little time limits frequency resolution. I would
 extend the project with window functions and a noisy signal so that one could
-compare leakage and peak detectability for rectangular, Hann, and other windows.
+estimate leakage and peak detectability.

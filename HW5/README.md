@@ -53,6 +53,8 @@ gcc spherical_harmonics.c -lmpfr -lgmp -lm -o spherical_harmonics
 ./spherical_harmonics 1.0 0.5 4
 ```
 
+## Activate environment if mpfr is not present
+
 If MPFR and GMP are not installed system-wide, run `install_mpfr.sh` and then
 source `activate_mpfr.sh` before compiling.
 

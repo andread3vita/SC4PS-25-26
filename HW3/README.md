@@ -6,7 +6,7 @@ orders, and writes the resulting matrix to a text file.
 From this directory, compile it with:
 
 ```bash
-gcc matrixMultiplication.c -lm -o matrixMultiplication
+gcc matrixMultiplication.c -lm -o matrixMultiplication -lm
 ```
 
 Run it with the diagonal values `a` and `b`, the matrix size `N`, and an output

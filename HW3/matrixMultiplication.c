@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     }
 
 
-    // Check that only the diagonal elements are equal to a * b
+    // Check that only the diagonal elements are equal to a * b and off-diagonal are zeros
 
     // first check: trace
     double trace = 0.;
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 
         double expected;
 
-        if (i == j) {
+        if (fabs(i - j) < 1e-8){
             expected = a * b;
         } else {
             expected = 0.0;

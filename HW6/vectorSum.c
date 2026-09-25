@@ -6,6 +6,11 @@
 
 int main(int argc, char *argv[])
 {
+    if (argc != 2)
+    {
+        fprintf(stderr, "Usage: %s <input file>\n", argv[0]);
+        return 1;
+    }
 
     FILE *file = fopen(argv[1], "r");
 
@@ -83,7 +88,7 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i < N; i++)
     {
-        if (d_loop[i] != d[i])
+        if (fabs(d_loop[i] - d[i]) > 1e-8)
         {
             isCorrect = false;
             break;
@@ -113,91 +118,39 @@ int main(int argc, char *argv[])
     else
         printf("loop_sum is not equal to total_sum\n");
 
-    hid_t fileout = H5Fcreate("results.h5", H5F_ACC_TRUNC,
-                       H5P_DEFAULT, H5P_DEFAULT);
+    size_t stored_elements = number_of_chunks * (size_t)chunk_size;
+    float *chunk_data = calloc(stored_elements, sizeof(float));
 
-    hid_t chunks = H5Gcreate2(fileout, "chunks",
-                            H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
+    for (int i = 0; i < N; i++)
+        chunk_data[i] = d[i];
 
-    const char *names[] = {"x", "y", "d"};
-    float *vectors[] = {x, y, d};
+    hid_t fileout = H5Fcreate("output.h5", H5F_ACC_TRUNC,
+                              H5P_DEFAULT, H5P_DEFAULT);
 
-    for (size_t chunk = 0; chunk < number_of_chunks; chunk++)
-    {
-        size_t start = chunk * (size_t)chunk_size;
-        size_t end = start + (size_t)chunk_size;
+    hsize_t chunks_dims[2] = {number_of_chunks, (hsize_t)chunk_size};
+    hid_t chunks_space = H5Screate_simple(2, chunks_dims, NULL);
+    hid_t chunks_dataset = H5Dcreate2(fileout, "chunks", H5T_IEEE_F32LE, chunks_space, H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
 
-        if (end > (size_t)N)
-            end = (size_t)N;
+    H5Dwrite(chunks_dataset, H5T_NATIVE_FLOAT, H5S_ALL, H5S_ALL, H5P_DEFAULT, chunk_data);
 
-        char group_name[64];
-        snprintf(group_name, sizeof(group_name), "chunk_%zu", chunk);
+    H5Dclose(chunks_dataset);
+    H5Sclose(chunks_space);
 
-        hid_t group = H5Gcreate2(chunks, group_name,
-                                H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
+    hsize_t partial_sums_dims[1] = {number_of_chunks};
+    hid_t partial_sums_space = H5Screate_simple(1, partial_sums_dims, NULL);
+    hid_t partial_sums_dataset = H5Dcreate2(fileout, "partial_sums",
+                                            H5T_IEEE_F32LE,
+                                            partial_sums_space, H5P_DEFAULT,
+                                            H5P_DEFAULT, H5P_DEFAULT);
 
-        // Save the three vector portions
-        hsize_t dims[1] = {end - start};
-        hid_t space = H5Screate_simple(1, dims, NULL);
+    H5Dwrite(partial_sums_dataset, H5T_NATIVE_FLOAT,
+             H5S_ALL, H5S_ALL, H5P_DEFAULT, partial_chunk_sum);
 
-        for (int v = 0; v < 3; v++)
-        {
-            hid_t dataset = H5Dcreate2(group, names[v], H5T_IEEE_F32LE,
-                                    space, H5P_DEFAULT,
-                                    H5P_DEFAULT, H5P_DEFAULT);
-
-            H5Dwrite(dataset, H5T_NATIVE_FLOAT,
-                    H5S_ALL, H5S_ALL, H5P_DEFAULT,
-                    vectors[v] + start);
-
-            H5Dclose(dataset);
-        }
-
-        H5Sclose(space);
-
-        space = H5Screate(H5S_SCALAR);
-
-        hid_t dataset = H5Dcreate2(group, "partial_sum", H5T_IEEE_F32LE,
-                                space, H5P_DEFAULT,
-                                H5P_DEFAULT, H5P_DEFAULT);
-
-        H5Dwrite(dataset, H5T_NATIVE_FLOAT,
-                H5S_ALL, H5S_ALL, H5P_DEFAULT,
-                &partial_chunk_sum[chunk]);
-
-        H5Dclose(dataset);
-        H5Sclose(space);
-        H5Gclose(group);
-    }
-
-    H5Gclose(chunks);
-
-    hsize_t dims[1] = {number_of_chunks};
-    hid_t space = H5Screate_simple(1, dims, NULL);
-
-    hid_t dataset = H5Dcreate2(fileout, "partial_chunk_sum",
-                            H5T_IEEE_F32LE, space,
-                            H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
-
-    H5Dwrite(dataset, H5T_NATIVE_FLOAT,
-            H5S_ALL, H5S_ALL, H5P_DEFAULT, partial_chunk_sum);
-
-    H5Dclose(dataset);
-    H5Sclose(space);
-
-    space = H5Screate(H5S_SCALAR);
-
-    dataset = H5Dcreate2(fileout, "total_sum", H5T_IEEE_F32LE,
-                        space, H5P_DEFAULT,
-                        H5P_DEFAULT, H5P_DEFAULT);
-
-    H5Dwrite(dataset, H5T_NATIVE_FLOAT,
-            H5S_ALL, H5S_ALL, H5P_DEFAULT, &total_sum);
-
-    H5Dclose(dataset);
-    H5Sclose(space);
+    H5Dclose(partial_sums_dataset);
+    H5Sclose(partial_sums_space);
     H5Fclose(fileout);
 
+    free(chunk_data);
     free(d);
     free(d_loop);
     free(partial_chunk_sum);
