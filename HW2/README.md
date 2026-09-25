@@ -13,5 +13,5 @@ Run it by supplying `a`, the common value of the elements of `x`, the common
 value of the elements of `y`, and the vector length `N`:
 
 ```bash
-./vectorSum 2.5 3.0 1.0 100
+./vectorSum 3 0.1 7.1 100
 ```
