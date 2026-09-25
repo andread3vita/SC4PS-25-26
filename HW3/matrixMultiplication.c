@@ -65,7 +65,6 @@ int main(int argc, char *argv[])
     
     if ((fabs(trace - N * a * b) < tol) && isCorrect) printf("C has diagonal elements equal to a * b\n");
     else printf("C has not diagonal elements equal to a * b\n");
-    
 
     // Benchmarking
     clock_t begin_1 = clock();
@@ -95,8 +94,8 @@ int main(int argc, char *argv[])
     double time_spent_2 = (double)(end_2 - begin_2) / CLOCKS_PER_SEC;
 
 
-    printf("Time 1: Multiplication (column major): %f [s] \n", time_spent_1);
-    printf("Time 2: Multiplication (row major): %f [s] \n", time_spent_2);
+    printf("Time 1: Multiplication (ijk): %f [s] \n", time_spent_1);
+    printf("Time 2: Multiplication (jik): %f [s] \n", time_spent_2);
 
 
     // Save C in a file
@@ -116,7 +115,7 @@ int main(int argc, char *argv[])
 
     fclose(file); 
 
-    
+
     free(C);
     free(A);
     free(B);
