@@ -1,0 +1,5 @@
+a = 2.5
+x_el = 3.0
+y_el = 1.0
+N = 10
+chunk_size = 3

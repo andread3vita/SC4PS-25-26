@@ -1,0 +1,25 @@
+======================================
+   MPFR 4.2.2: tests/test-suite.log
+======================================
+
+# TOTAL: 198
+# PASS:  198
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+
+System information (uname -a): Linux 5.14.0-611.54.3.el9_7.x86_64 #1 SMP PREEMPT_DYNAMIC Thu May 7 16:31:24 EDT 2026 x86_64 x86_64 x86_64
+Distribution information (/etc/os-release):
+NAME="AlmaLinux"
+VERSION="9.8 (Olive Jaguar)"
+ID="almalinux"
+ID_LIKE="rhel centos fedora"
+VERSION_ID="9.8"
+PLATFORM_ID="platform:el9"
+PRETTY_NAME="AlmaLinux 9.8 (Olive Jaguar)"
+ANSI_COLOR="0;34"
+
+.. contents:: :depth: 2
+
