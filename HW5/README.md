@@ -50,8 +50,7 @@ angles are in radians and \(0\leq\ell\leq50\).  Although `phi` is required as
 an input, \(Y_{\ell0}\) is independent of it.
 
 ```bash
-gcc -std=c11 -O2 -Wall -Wextra -Wpedantic \
-    spherical_harmonics.c -lmpfr -lgmp -lm -o spherical_harmonics
+gcc spherical_harmonics.c -lmpfr -lgmp -lm -o spherical_harmonics
 ./spherical_harmonics 1.0 0.5 4
 ```
 
