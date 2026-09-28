@@ -12,9 +12,12 @@ int main(int argc, char *argv[])
     int N = atoi(argv[3]);
     char* filename = argv[4];
 
-    double *A = malloc(N * N * sizeof(double));
-    double *B = malloc(N * N * sizeof(double));
-    double *C = malloc(N * N * sizeof(double));
+    size_t elements = (size_t)N * (size_t)N;
+    double *A = calloc(elements, sizeof *A);
+    double *B = calloc(elements, sizeof *B);
+    double *C = calloc(elements, sizeof *C);
+    double *C_test_1 = calloc(elements, sizeof *C_test_1);
+    double *C_test_2 = calloc(elements, sizeof *C_test_2);
 
     for (int i = 0; i < N; i++)
     {
@@ -68,7 +71,6 @@ int main(int argc, char *argv[])
 
     // Benchmarking
     clock_t begin_1 = clock();
-    double *C_test_1 = malloc(N * N * sizeof(double));
     for (int i = 0; i < N; i++)
     {   
         for (int j = 0; j < N; j++)
@@ -81,7 +83,6 @@ int main(int argc, char *argv[])
     double time_spent_1 = (double)(end_1 - begin_1) / CLOCKS_PER_SEC;
 
     clock_t begin_2 = clock();
-    double *C_test_2 = malloc(N * N * sizeof(double));
     for (int j = 0; j < N; j++)
     {   
         for (int i = 0; i < N; i++)
