@@ -113,7 +113,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < N; i++)
         loop_sum += d_loop[i];
 
-    if (loop_sum == total_sum)
+    if (fabs(loop_sum - total_sum) < 1e-8)
         printf("loop_sum is equal to total_sum\n");
     else
         printf("loop_sum is not equal to total_sum\n");
